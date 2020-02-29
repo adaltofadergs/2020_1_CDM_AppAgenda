@@ -6,9 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
     </style>
-
 
     <style name="labels" parent="AppTheme" >
         <item name="android:textSize">25dp</item>
@@ -25,19 +23,3 @@
     </style>
 
 </resources>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

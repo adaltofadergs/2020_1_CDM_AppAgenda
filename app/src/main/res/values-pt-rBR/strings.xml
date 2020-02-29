@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AppAgenda_2020_1</string>
+    <string name="lblNome">Nome:</string>
+    <string name="txtNome">Digite o nome:</string>
+    <string name="lblTelefone">Telefone:</string>
+    <string name="txtTelefone">Digite o Telefone:</string>
+
+    <string name="lblCidade">Cidade:</string>
+    <string name="lblEstado">Estado:</string>
+
+    <string name="lblSexo">Sexo:</string>
+    <string name="lblMasculino">Masculino</string>
+    <string name="lblFeminino">Feminino</string>
+    <string name="lblAceitaEmail">Aceita receber e-mail</string>
+
+    <string name="btnSalvar">Salvar</string>
+
+    <string-array name="estados">
+        <item>Selecione...</item>
+        <item>PR</item>
+        <item>RS</item>
+        <item>SC</item>
+    </string-array>
+
+
+
+
+
+</resources>
