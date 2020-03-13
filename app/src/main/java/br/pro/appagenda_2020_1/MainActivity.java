@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -38,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 salvar();
+            }
+        });
+
+        spEstado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                carregarCidades( position );
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 
@@ -82,6 +96,35 @@ public class MainActivity extends AppCompatActivity {
         alerta.show();
 
 
+
+    }
+
+    private void carregarCidades( int posicao ){
+        String[] rs = {"Selecione...", "Alvorada", "Canoas", "Porto Alegre"};
+        String[] sc = {"Selecione...", "Crisciuma", "Florianópolis", "Passo de Torres"};
+        String[] pr = {"Selecione...", "Cascavél", "Curitiba", "São José dos Pinhais"};
+        String[] cidades = {"Selecione um estado..."};
+
+        switch ( posicao ){
+            case 0:
+                spCidade.setEnabled(false);
+                break;
+            case 1:
+                cidades = pr;
+                spCidade.setEnabled( true );
+                break;
+            case 2:
+                cidades = rs;
+                spCidade.setEnabled( true );
+                break;
+            case 3:
+                cidades = sc;
+                spCidade.setEnabled( true );
+                break;
+        }
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
+                cidades);
+        spCidade.setAdapter( adapter );
 
     }
 
